@@ -49,6 +49,8 @@ p{margin:0;}
 }
 .eyebrow::before{content:"";width:22px;height:1px;background:var(--ink-soft);}
 
+#servicios, #quienes-somos, #contacto, #trabajos{scroll-margin-top:100px;}
+
 /* ---------- header ---------- */
 .site-header{
   position:sticky;top:0;z-index:100;
@@ -167,7 +169,7 @@ nav.primary-nav a:hover::after{width:100%;}
 .gallery-note{max-width:640px;color:var(--ink-soft);font-size:15px;margin-top:-40px;margin-bottom:56px;}
 .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
 .gallery-item{border:1px solid var(--line);}
-.gallery-item img{width:100%;height:340px;object-fit:cover;}
+.gallery-item img{width:100%;height:auto;display:block;}
 .gallery-item figcaption{
   padding:16px 20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
   color:var(--ink-soft);border-top:1px solid var(--line);
@@ -203,9 +205,9 @@ nav.primary-nav a:hover::after{width:100%;}
 .site-footer small{font-size:12.5px;letter-spacing:.03em;}
 
 @media (max-width:900px){
-  nav.primary-nav{position:fixed;inset:84px 0 0 0;background:var(--paper);
+  nav.primary-nav{position:fixed;top:84px;right:0;bottom:0;left:0;background:var(--paper);
     flex-direction:column;align-items:flex-start;padding:32px;gap:24px;
-    display:none;z-index:90;}
+    display:none;z-index:90;overflow-y:auto;}
   nav.primary-nav.open{display:flex;}
   nav.primary-nav a{font-size:16px;}
   .nav-toggle{display:block;}
